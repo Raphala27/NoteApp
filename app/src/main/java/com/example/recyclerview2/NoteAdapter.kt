@@ -37,11 +37,12 @@ class NoteAdapter(
     }
 
     // Méthode pour mettre à jour une note après modification
-    fun updateNote(position: Int, newTitle: String, newDescription: String) {
-        noteList[position].title = newTitle
-        noteList[position].description = newDescription
-        notifyItemChanged(position)
+    fun updateNotes(newNotes: MutableList<Note>) {
+        noteList.clear()
+        noteList.addAll(newNotes)
+        notifyDataSetChanged()
     }
+
 
 
     fun addNote(note: Note) {

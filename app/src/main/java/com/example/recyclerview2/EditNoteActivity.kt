@@ -43,5 +43,6 @@ class EditNoteActivity : AppCompatActivity() {
             finish()
         }
 
+
     }
 }
