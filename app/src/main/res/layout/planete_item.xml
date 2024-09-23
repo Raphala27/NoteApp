@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="50dp"
+    app:strokeColor="@color/black"
+    app:strokeWidth="5dp">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/planeteImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:src="@drawable/terre"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/planeteNom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="Terre"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_weight="0.1" />
+
+        <TextView
+            android:id="@+id/planeteDistance"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="1500000"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:layout_weight="0.1"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
