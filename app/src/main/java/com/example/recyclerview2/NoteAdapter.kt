@@ -8,7 +8,8 @@ import com.example.recyclerview2.models.Note
 
 class NoteAdapter(
     private var noteList: MutableList<Note>,
-    private val editAction: (Note, Int) -> Unit
+    private val editAction: (Note, Int) -> Unit,
+    private val deleteAction: (Note, Int) -> Unit
 ) : RecyclerView.Adapter<NoteViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
@@ -21,7 +22,7 @@ class NoteAdapter(
         val note = noteList[position]
         holder.bindNote(note,
             editAction = { editAction(note, position) },  // Action d'édition
-            deleteAction = { deleteNote(position) }       // Action de suppression
+            deleteAction = { deleteAction(note, position) } // Action de suppression
         )
     }
 
@@ -29,25 +30,9 @@ class NoteAdapter(
         return noteList.size
     }
 
-    // Méthode pour supprimer une note
-    private fun deleteNote(position: Int) {
-        noteList.removeAt(position)
-        notifyItemRemoved(position)
-        notifyItemRangeChanged(position, noteList.size)
-    }
-
-    // Méthode pour mettre à jour une note après modification
+    // Méthode pour mettre à jour les notes
     fun updateNotes(newNotes: MutableList<Note>) {
-        noteList.clear()
-        noteList.addAll(newNotes)
+        noteList = newNotes
         notifyDataSetChanged()
     }
-
-
-
-    fun addNote(note: Note) {
-        noteList.add(note)
-        notifyItemInserted(noteList.size - 1)
-    }
-
 }
