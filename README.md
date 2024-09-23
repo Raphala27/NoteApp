@@ -20,8 +20,8 @@ L'application propose les fonctionnalités suivantes :
 
 | Plateforme | Langage de programmation | Outils de développement |
 |------------|--------------------------|-------------------------|
-| ![Android](https://img.icons8.com/ios-filled/50/000000/android-os.png) Android | ![Java](https://img.icons8.com/color/50/000000/java-coffee-cup-logo.png) Java | ![Android Studio](https://img.icons8.com/color/50/000000/android-studio--v2.png) Android Studio |
-| ![Kotlin](https://img.icons8.com/color/50/000000/kotlin.png) Kotlin | 
+| ![Android](https://img.icons8.com/ios-filled/50/000000/android-os.png) Android |  ![Kotlin](https://img.icons8.com/color/50/000000/kotlin.png) Kotlin | ![Android Studio](https://img.icons8.com/color/50/000000/android-studio--v2.png) Android Studio |
+
 
 ## Installation et utilisation
 1. Cloner ce dépôt dans votre environnement local.
