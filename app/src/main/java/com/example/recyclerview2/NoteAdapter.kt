@@ -42,4 +42,11 @@ class NoteAdapter(
         noteList[position].description = newDescription
         notifyItemChanged(position)
     }
+
+
+    fun addNote(note: Note) {
+        noteList.add(note)
+        notifyItemInserted(noteList.size - 1)
+    }
+
 }

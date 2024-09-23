@@ -22,8 +22,13 @@ class EditNoteActivity : AppCompatActivity() {
         saveButton = findViewById(R.id.saveButton)
 
         // Récupérer les données de la note à partir de l'Intent
-        val noteTitle = intent.getStringExtra("note_title")
-        val noteDescription = intent.getStringExtra("note_description")
+        val noteTitle = intent.getStringExtra("note_title") ?: ""
+        val noteDescription = intent.getStringExtra("note_description") ?: ""
+
+        if (noteTitle.isEmpty() && noteDescription.isEmpty()) {
+            // Cela signifie que nous sommes en mode création
+        }
+
 
         // Initialiser les champs avec les données existantes
         editNoteTitle.setText(noteTitle)
@@ -31,12 +36,12 @@ class EditNoteActivity : AppCompatActivity() {
 
         // Sauvegarder les modifications
         saveButton.setOnClickListener {
-            // Renvoie les nouvelles valeurs à l'activité précédente
             val resultIntent = Intent()
             resultIntent.putExtra("new_note_title", editNoteTitle.text.toString())
             resultIntent.putExtra("new_note_description", editNoteDescription.text.toString())
             setResult(Activity.RESULT_OK, resultIntent)
-            finish() // Fermer cette activité et retourner à l'activité précédente
+            finish()
         }
+
     }
 }
