@@ -16,6 +16,9 @@ L'application propose les fonctionnalités suivantes :
 - **Titre** : Un titre court permettant de décrire rapidement le contenu de la note.
 - **Texte** : Le contenu principal de la note.
 
+## Logo de l'application
+Pour rendre **NoteApp** plus professionnelle et visuellement attrayante, nous avons ajouté un logo personnalisé à l'application, lui donnant l'apparence d'une véritable application de prise de notes.
+![Logo](https://static.vecteezy.com/ti/vecteur-libre/p3/504617-notes-icone-design-gratuit-vectoriel.jpg)
 ## Technologies utilisées
 
 ### RecyclerView
