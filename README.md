@@ -18,7 +18,7 @@ L'application propose les fonctionnalités suivantes :
 
 ## Logo de l'application
 Pour rendre **NoteApp** plus professionnelle et visuellement attrayante, nous avons ajouté un logo personnalisé à l'application, lui donnant l'apparence d'une véritable application de prise de notes.
-![Logo](NoteApp.jpeg)
+![Logo](NoteAPP.jpeg)
 ## Technologies utilisées
 
 ### RecyclerView
